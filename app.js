@@ -155,15 +155,26 @@ let progressNow;
     //  alert(af);
 
   // task4
-    let a = prompt("Первое число?", 1);
-    let b = prompt("Второе число?", 2);
+    // let a = prompt("Первое число?", 1);
+    // let b = prompt("Второе число?", 2);
 
-    alert(+a + +b); // 12
+    // alert(+a + +b); // 12
+
+// lesson9
+
+// task1
+// let y91 = 5 > 4 //true
+// let y92 = "ананас" > "яблоко" //false
+// let y93 = "2" > "12" //true
+// let y94 = undefined == null //true
+// let y95 = undefined === null //false
+// let y96 = null == "\n0\n" //false
+// let y97 = null === +"\n0\n" //false
 
 
 
 
-progressNow = 8;
+progressNow = 9;
 progressSum = (progressNow/lessonSum)*100;
 alert(`Поздравляю, ты прошла ${progressSum}% курса!`);
 
