@@ -171,10 +171,62 @@ let progressNow;
 // let y96 = null == "\n0\n" //false
 // let y97 = null === +"\n0\n" //false
 
+// lesson10
+
+// task2
+// let answerUser = prompt ("Какое «официальное» название JavaScript?",  "Название JavaScript");
+// if (answerUser == 'ECMAScript') {
+//   alert ("Верно!")
+// }
+// else {
+//   alert ("Не знаете? ECMAScript!")
+// }
+
+// task3
+// let numberUser = prompt ("Введите любое число", "0");
+// if (numberUser > 0) {
+//   alert ("1")
+// }
+// if (numberUser<0) {
+//   alert ("-1")
+// } else {
+//   alert ("0")
+// }
+
+// task4
+// let result;
+// if (a + b < 4) {
+//   result = 'Мало';
+// } else {
+//   result = 'Много';
+// }
 
 
+// let a = 1;
+// let b = 6;
+// let result = (a + b < 4) ? 'Мало' : 'Много';
+// alert (result);
 
-progressNow = 9;
+// task5
+// let message;
+// if (login == 'Сотрудник') {
+//   message = 'Привет';
+// } else if (login == 'Директор') {
+//   message = 'Здравствуйте';
+// } else if (login == '') {
+//   message = 'Нет логина';
+// } else {
+//   message = '';
+// }
+
+// let login = "j";
+// let message = (login == 'Сотрудник') ? 'Привет' :
+//   (login == 'Директор') ? 'Здравствуйте' :
+//   (login == '') ? 'Нет логина' : '';
+//   alert (message);
+
+
+progressNow = 10;
 progressSum = (progressNow/lessonSum)*100;
 alert(`Поздравляю, ты прошла ${progressSum}% курса!`);
 
