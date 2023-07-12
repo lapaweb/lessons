@@ -171,9 +171,11 @@ let progressNow;
 // let y96 = null == "\n0\n" //false
 // let y97 = null === +"\n0\n" //false
 
+
 // lesson10
 
 // task2
+
 // let answerUser = prompt ("Какое «официальное» название JavaScript?",  "Название JavaScript");
 // if (answerUser == 'ECMAScript') {
 //   alert ("Верно!")
@@ -183,6 +185,7 @@ let progressNow;
 // }
 
 // task3
+
 // let numberUser = prompt ("Введите любое число", "0");
 // if (numberUser > 0) {
 //   alert ("1")
@@ -193,7 +196,9 @@ let progressNow;
 //   alert ("0")
 // }
 
+
 // task4
+
 // let result;
 // if (a + b < 4) {
 //   result = 'Мало';
@@ -207,7 +212,9 @@ let progressNow;
 // let result = (a + b < 4) ? 'Мало' : 'Много';
 // alert (result);
 
+
 // task5
+
 // let message;
 // if (login == 'Сотрудник') {
 //   message = 'Привет';
@@ -225,10 +232,174 @@ let progressNow;
 //   (login == '') ? 'Нет логина' : '';
 //   alert (message);
 
+// lesson11
+// task3
+// alert( alert(1) || 2 || alert(3) );
+// alert(1);
 
-progressNow = 10;
-progressSum = (progressNow/lessonSum)*100;
-alert(`Поздравляю, ты прошла ${progressSum}% курса!`);
+
+// task6
+
+// let ageUser = prompt ("Сколько Вам лет?", "100");
+
+// if (ageUser >= 14 && ageUser <= 90) {
+//   alert ("Молодец!"); }
+//   else {
+//     alert ("Не молодец!");
+// }
+
+
+// task7
+// v1
+
+// let ageUser = prompt ("Сколько Вам лет?", "100");
+
+// if (ageUser < 14 || ageUser > 90) {
+//   alert ("Молодец!"); }
+//   else {
+//     alert ("Не молодец!");
+// }
+
+// v2
+
+// if (!(ageUser >= 14) || !(ageUser <= 90)) {
+//   alert ("Молодец!"); }
+//   else {
+//     alert ("Не молодец!");
+// }
+
+// v3
+// if (!(ageUser >= 14 && ageUser <= 90)) {
+//   alert ("Молодец!"); }
+//   else {
+//     alert ("Не молодец!");
+// }
+
+
+// task9
+
+// let nameUser = prompt ('Введите логин');
+// if (nameUser == 'Админ') {
+//   let passwordUser = prompt ('Введите пароль')
+//   if (passwordUser = 'Я Главный') {
+//   alert ('Здравствуйте!') }
+//   else if (passwordUser == null || passwordUser == '') {
+//   alert ('Отменено')
+//   }
+//   else { 
+//   alert ('Неверный пароль')
+//   }
+// }
+// else if (nameUser == null || nameUser == '') {
+// alert ('Отменено');
+// }
+// else {
+// alert ('Я вас не знаю');
+// }
+
+
+// lesson13
+
+// task1
+
+// let i = 3;
+// alert( i-- );
+// alert (i);
+
+
+// task2
+
+// let i = 0;
+// while (++i < 5) alert( i );
+
+// 0
+// 1<5 - выводим 1
+// 2<5 - выводим 2
+// 3<5 - выводим 3
+// 4<5 - выводим 4
+// 5<5 - неверно, остановка цикла
+// выводим от 1 до 4
+
+// let i = 0;
+// while (i++ < 5) alert( i );
+
+// 0
+// выводим от 1 до 5
+
+// последнее значение для вывода = 5
+
+
+// task3
+
+// for (let i = 0; i < 5; i++) alert( i );
+// 0
+// 1
+// 2
+// 3
+// 4
+// for (let i = 0; i < 5; ++i) alert( i );
+// 0
+// 1
+// 2
+// 3
+// 4
+
+
+// task4
+
+// for (let i = 2; i <= 10; i=i+2) alert( i );
+// for (let i = 2; i <= 10; ++i) {
+//   if (i % 2 == 0) {
+//     alert( i );
+//   }
+// }
+
+
+// task5
+
+// for (let i = 0; i < 3; i++) {
+//   alert( `number ${i}!` );
+// }
+
+// let i=0;
+// while (i <3 ) {
+//   alert( `number ${i}!` );
+//   i++;
+// }
+
+
+// task6
+
+// for (let numberUser = 0; (numberUser <= 100 || numberUser == null);) {
+//   numberUser = prompt ('Введите число более 100');
+//   alert (numberUser);
+// }
+
+
+// task7
+
+// let n = 10;
+// nextNumber:
+// for (let i = 1; i <= n; ++i) {
+//   for (let k = 2; k < i; ++k) {
+//     if (i % k == 0) continue nextNumber;
+//   }
+//   alert (i);
+// }
+
+// alert( i + " " + k);
+
+
+
+
+
+
+
+
+
+// progressNow = 11;
+// progressSum = (progressNow/lessonSum)*100;
+// alert(`Поздравляю, ты прошла ${progressSum}% курса!`);
 
   
   
