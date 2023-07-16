@@ -1,4 +1,4 @@
-// LJ
+// LJ part 1 section 2
 
 const lessonSum = 91;
 let progressSum;
@@ -520,9 +520,40 @@ let progressNow;
 // } else {
 //   alert( pow(x, n) );
 // }
+
+
+// lesson16
+
+// ex1
+
+// function sayHi() {
+//   alert( "Привет" );
+// }
+
+// alert( sayHi() ); // выведет код функции
  
 
+// lesson17
 
+// task1
+
+// function ask(question, yes, no) {
+//   if (confirm(question)) yes()
+//   else no();
+// }
+
+// ask(
+//   "Вы согласны?",
+//   function() { alert("Вы согласились."); },
+//   function() { alert("Вы отменили выполнение."); }
+// );
+
+
+// let ask = confirm ("Вы согласны?") ? 
+//   () => alert('Вы согласились.') :
+//   () => alert('Вы отменили выполнение.');
+
+// ask();
 
 
 
