@@ -1,8 +1,8 @@
 // LJ part 1 section 2
 
-const lessonSum = 91;
-let progressSum;
-let progressNow;
+// const lessonSum = 91;
+// let progressSum;
+// let progressNow;
 
 
 // lesson1
