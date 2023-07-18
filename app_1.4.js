@@ -100,6 +100,109 @@
 // }
 
 
+// lesson4 - this
+
+
+// ex1
+
+// user = {
+//   sayHi() { // то же самое, что и "sayHi: function(){...}"
+//     alert("Привет");
+//   }
+// };
+
+// user.sayHi(); // Привет!
+
+
+// ex2
+
+// let user = {
+//   name: "John",
+//   age: 30,
+//   sayHi() {
+//     alert(this.name);
+//   }
+
+// };
+
+// user.sayHi(); 
+
+
+// task1
+
+// function makeUser() {
+//   return {
+//     name: "John",
+//     ref: this
+//   };
+// }
+
+// let user = makeUser();
+
+// alert( user.ref.name );
+// alert( user.name );
+// alert( user.ref );
+
+
+// task2
+
+// let calculator = {
+//   a: undefined,
+//   b: undefined,
+//   read () {
+//     this.a = Number(prompt ('Введите первое число'));
+//     this.b = Number(prompt ('Введите второе число'));
+//   },
+//   sum () {
+//     return this.a + this.b;
+//   },
+//   mul () {
+//     return this.a * this.b;
+//   }
+// };
+
+// calculator.read();
+// alert( calculator.sum() );
+// alert( calculator.mul() );
+
+
+// alert ( calculator.a);
+// alert ( calculator.b);
+
+
+// task3
+
+// let ladder = {
+//   step: 0,
+//   up() {
+//     this.step++;
+//     return this;
+//   },
+//   down() {
+//     this.step--;
+//     return this;
+//   },
+//   showStep: function() { // показывает текущую ступеньку
+//     alert( this.step );
+//     return this;
+//   }
+// };
+
+// // ladder.up();
+// // ladder.up();
+// // ladder.down();
+// // ladder.showStep(); // 1
+// // ladder.down();
+// // ladder.showStep(); // 0
+
+// ladder.up().up();
+
+// ladder.showStep();
+
+
+
+
+
 
 
 
