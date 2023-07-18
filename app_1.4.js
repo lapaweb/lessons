@@ -200,6 +200,72 @@
 // ladder.showStep();
 
 
+// lesson5
+
+// task1
+
+// let asc = {
+//   name: 'greg',
+// };
+
+// function A () {
+//   return asc;
+//  }
+
+// function B () {
+//    return asc;
+//  }
+
+// let a = new A();
+// let b = new B();
+
+
+// alert (a);
+// alert (b);
+
+// alert( a == b ); // true
+
+
+// task2
+
+// function Calculator(a,b) {
+//   this.read = function() {
+//     this.a = Number(prompt('a?'));
+//     this.b = Number(prompt('b?'));
+//   }
+//   this.sum = function() {
+//         return this.a + this.b;
+//       },
+//   this.mul = function() {
+//         return this.a * this.b;
+//       }
+// }
+
+// let calculator = new Calculator();
+// calculator.read();
+
+// alert( "Sum=" + calculator.sum() );
+// alert( "Mul=" + calculator.mul() );
+
+
+// task3
+
+// function Accumulator(startingValue) {
+//   this.value = startingValue;
+//   this.read = function() {
+//     this.value = this.value + Number(prompt ('Vvedite chislo'));
+//   }
+// }
+
+// let accumulator = new Accumulator(1); // начальное значение 1
+
+// accumulator.read(); // прибавляет введённое пользователем значение к текущему значению
+// accumulator.read(); // прибавляет введённое пользователем значение к текущему значению
+
+// alert(accumulator.value); // выведет сумму этих значений
+
+
+
 
 
 
