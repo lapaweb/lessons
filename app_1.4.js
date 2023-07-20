@@ -4,7 +4,7 @@
 // let progressSum;
 // let progressNow;
 
-// progressNow = 18+6;
+// progressNow = 18+6+5;
 // progressSum = (progressNow/lessonSum)*100;
 // alert(`Поздравляю, ты прошла ${progressSum}% первой части курса!`);
 
@@ -263,6 +263,61 @@
 // accumulator.read(); // прибавляет введённое пользователем значение к текущему значению
 
 // alert(accumulator.value); // выведет сумму этих значений
+
+
+// lesson7
+
+
+// ex1
+
+// let id = Symbol("id123");
+// alert(id); // TypeError: Cannot convert a Symbol value to a string
+
+
+// alert(id.toString()); // Symbol(id), теперь работает
+// alert(id.description); // id
+
+
+// ex2
+
+// let user = {
+//   name: "Вася"
+// };
+
+// let id = Symbol("id123");
+// let id = Symbol("id1235");
+
+// user[id] = 1;
+
+// alert( user[id] ); 
+
+
+// lesson8
+
+// ex1
+
+// вывод
+// let obj = {
+//   name: 777,
+// }
+
+// alert(obj);
+// alert(typeof obj);
+
+// alert(obj.name);
+// alert(typeof obj.name);
+
+
+// // используем объект в качестве ключа
+// anotherObj[obj] = 123;
+
+
+// ex2
+
+
+
+
+
 
 
 
