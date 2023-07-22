@@ -61,3 +61,51 @@
 // alert( randomInteger(1, 5) ); // 3.7894332423
 // alert( randomInteger(1, 5) ); // 4.3435234525
 
+
+// lesson3
+
+// task1
+
+// function ucFirst(str) {
+//   if (!str) return str;
+//   str = str[0].toUpperCase() + str.slice(1);
+//   return (str);
+// }
+// // ucFirst("вася");
+
+// alert( ucFirst("вася") );
+
+
+// task2
+
+// function checkSpam(str) {
+//   str = str.toLowerCase();
+//   return str.includes("viagra") || str.includes("xxx");
+// };
+
+
+// alert ( checkSpam("buy ViAgRA now") );
+// alert ( checkSpam('free xxxxx') ); 
+// alert ( checkSpam("innocent rabbit" ));
+
+
+// task3
+
+// function truncate(str, maxlength) {
+//   if (str.length <= maxlength) {
+//     return str;
+//   }
+//   return str.slice(0, maxlength - 1) + '…';
+// };
+
+// alert ( truncate("Вот, что мне хотелось бы сказать на эту тему:", 20) );
+// alert ( truncate("Всем привет!", 20) );
+
+
+// task4
+
+function extractCurrencyValue(str) {
+ return Number(str.slice(1));
+};
+
+alert( extractCurrencyValue('$120') );
