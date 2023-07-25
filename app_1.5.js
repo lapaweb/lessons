@@ -4,7 +4,7 @@
 // let progressSum;
 // let progressNow;
 
-// progressNow = 18+6+8+2;
+// progressNow = 18+6+8+3;
 // progressSum = ((progressNow/lessonSum)*100).toFixed(2);
 // alert(`Поздравляю, ты прошла ${progressSum}% первой части курса!`);
 
@@ -62,7 +62,7 @@
 // alert( randomInteger(1, 5) ); // 4.3435234525
 
 
-// lesson3
+// lesson3 - string
 
 // task1
 
@@ -104,8 +104,85 @@
 
 // task4
 
-function extractCurrencyValue(str) {
- return Number(str.slice(1));
-};
+// function extractCurrencyValue(str) {
+//  return Number(str.slice(1));
+// };
 
-alert( extractCurrencyValue('$120') );
+// alert( extractCurrencyValue('$120') );
+
+
+// lesson4 - Array
+
+// task2
+
+// let styles = ["Джаз", "Блюз", "Eng"];
+// alert(styles);
+
+// styles.push("Рок-н-ролл");
+// alert(styles);
+
+// function lengthMid(arrLength) {
+//   return Math.floor(((arrLength - 1) / 2));
+// }
+
+// function changeMid(arrLength) {
+//   styles[lengthMid(styles.length)] = "Классика";
+
+//   if (Number(arrLength) % 2 === 0) {
+//     styles[lengthMid(styles.length) + 1] = "Классика" ;
+//   }
+// }
+
+// lengthMid(styles.length);
+// changeMid(styles.length);
+
+// alert(styles);
+
+
+// alert(styles.shift());
+// alert(styles);
+
+
+// styles.unshift("Rep", "Reggy");
+// alert(styles);
+
+
+// task3
+
+// let arr = ["a", "b"];
+
+// arr.push(function() {
+//   alert( this );
+// });
+
+// arr[2]();
+
+
+// task4
+
+
+// let arr = [];
+
+// function SumImput() {
+
+//   while (true) {
+//     let numUser = prompt('a');
+//     console.log(typeof numUser);
+//     if (numUser === null || numUser === '' || isFinite(numUser) === false) {
+//       break;
+//     }
+//     else {
+//       arr.push(Number(numUser));
+//     }
+//   }
+
+//   let sum = 0;
+//   for (let num of arr) {
+//     sum = sum + num;
+//   }
+//   alert (sum);
+// };
+
+// SumImput();
+// console.log(arr);
+// alert(sum);
