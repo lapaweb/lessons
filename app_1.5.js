@@ -186,3 +186,403 @@
 // SumImput();
 // console.log(arr);
 // alert(sum);
+
+
+// lesson5 - method Array
+
+// ex1
+
+// let users = [
+//   {id: 1, name: "Вася"},
+//   {id: 2, name: "Петя"},
+//   {id: 3, name: "Маша"}
+// ];
+
+// // возвращает массив, состоящий из двух первых пользователей
+// let someUsers = users.filter(item => item.id < 3);
+
+// alert(someUsers.length); // 2
+// alert(someUsers[0].name); 
+// console.log(someUsers); 
+
+
+// task1 - спросить у Миши
+
+// function camelize1(str) {
+//   let arr = str.split('-');
+//   let arrUper = arr.map(function(item, index) {
+//     return index == 0 ? item : item = item[0].toUpperCase() + item.slice(1);
+//   });
+//   let arrResult = arrUper.join('');
+//   alert(arrResult);
+// };
+
+
+// function camelize(str) {
+//   return str
+//     .split('-')
+//     .map(
+//     (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1))
+//     .join('');
+// };
+
+// // camelize1('background-color');
+
+// // alert(camelize("background-color"));
+
+// function camelize2(str) {
+//   let arr = str.split('-');
+//   arr = arr.map(function(item, index) {
+//     return index == 0 ? item : item = item[0].toUpperCase() + item.slice(1);
+//   });
+//   arr = arr.join('');
+//   alert(arr);
+// };
+
+// camelize2('background-color');
+
+
+// task2
+
+// function filterRange1(arr, a, b) {
+//   let arrResult = [];
+//   arr.forEach(function(item) {
+//     if (item >= a && item <= b) {
+//       arrResult.push(item);
+//     }
+//   });
+//   return arrResult;
+// } 
+
+
+// function filterRange(arr, a, b) {
+//   let arrResult = arr.filter(item => (a <= item && item <= b))
+//   return arrResult;
+// }
+
+// let arr = [5, 3, 8, 1];
+// let filtered = filterRange(arr, 1, 4);
+
+// alert( filtered ); // 3,1 (совпадающие значения)
+// alert( arr ); // 5,3,8,1 (без изменений)
+
+
+// task3
+
+
+// task3
+
+// function filterRangeInPlace(arr, a, b) {
+//   arr.forEach(function(item, index, arr) {
+//     console.log(item, index, arr);
+//     console.log(item < a, item > b);
+//    if (item < a || item > b) {
+//           arr.splice(index, 1);
+//           // console.log(arr);
+//         }
+//    });
+// };
+
+// let arr = [5, 3, 3, 3, 6, 6, 15, 1];
+
+// filterRangeInPlace(arr, 1, 4); // удалены числа вне диапазона 1..4
+
+// alert( arr ); // [3, 1]
+
+// function filterRangeInPlace(arr, a, b) {
+
+//   for (let i = 0; i < arr.length; i++) {
+//     let item = arr[i];
+//     if (item < a || item > b) {
+//       arr.splice(i, 1);
+//       i--;
+//     }
+//   }
+
+// }
+
+// let arr = [5, 3, 3, 3, 6, -7, 0, 6, 15, 1];
+
+// filterRangeInPlace(arr, 1, 4); // удалены числа вне диапазона 1..4
+
+// alert( arr ); // [3, 1]
+
+
+// task4
+
+
+// let arr = [5, 2, 1, -10, 0, 8];
+
+// function compareNumeric(a, b) {
+//   if (a < b) return 1;
+//   if (a == b) return 0;
+//   if (a > b) return -1;
+// }
+
+// arr.sort(compareNumeric);
+
+// alert(arr);
+
+
+
+// let arr = [5, 2, 1, -10, 8];
+// arr.sort((a, b) => a - b);
+// alert(arr);
+
+
+// task5
+
+// let arr = ["HTML", "JavaScript", "CSS"];
+
+// let sorted = copySorted(arr);
+
+// my variant
+// function copySorted(arr) {
+//   let sort = arr.slice();
+//   sort.sort(( (a, b) => a.localeCompare(b) ) );
+//   return sort;
+// };
+
+// true variant
+// function copySorted(arr) {
+//   return arr.slice().sort();
+// }
+
+// alert( sorted ); // CSS, HTML, JavaScript
+// alert( arr ); // HTML, JavaScript, CSS (без изменений)
+
+
+// task6
+
+// function Calculator(str) {
+
+// }
+
+// // let result = function calculate(str) {
+
+// //   let arr = (str.split(' ')),
+// //   a = Number(arr[0]),
+// //   op = Number(arr[1]),
+// //   b = Number(arr[2])
+
+
+// // }
+  
+// //   console.log(arr);
+
+// //   // let result = (op === '+') ? a + b : 1 ;
+// //   console.log(result);
+// //   console.log(op);
+
+
+// calculate("3 + 7");
+
+
+// task7
+
+// let vasya = { 
+//   name: "Вася", 
+//   age: 25 
+// };
+
+// let petya = { 
+//   name: "Петя", 
+//   age: 30 
+// };
+
+// let masha = { 
+//   name: "Маша", 
+//   age: 28 
+// };
+
+// let users = [vasya, petya, masha];
+
+// // alert (users[1].name);
+
+// // let names = [
+// //   users[0].name,
+// //   users[1].name,
+// //   users[2].name
+// // ]
+
+// // let names = users.map(item => item.name);
+
+// let names = users.map(function(item) {
+//  return item.name;
+// });
+
+// console.log(names);
+// alert( names ); // Вася, Петя, Маша
+
+
+// task8
+
+// let petya = { 
+//   name: "Петя", 
+//   surname: "Иванов", 
+//   id: 2 
+// };
+
+// let vasya = { 
+//   name: "Вася", 
+//   surname: "Пупкин", 
+//   id: 1 
+// };
+
+// let masha = { 
+//   name: "Маша", 
+//   surname: "Петрова",
+//   id: 3 
+// };
+
+// let users = [ vasya, petya, masha ];
+
+
+// // let usersMapped = users.map(({ name, surname, id }) => ({ fullName: `${name} ${surname}`, id }));
+// let usersMapped = users.map(( item ) => ({ fullName: item.name + " " + item.surname, id: item.id }));
+
+// console.log(typeof usersMapped);
+// console.log(usersMapped);
+
+
+// usersMapped = [
+//   { fullName: "Вася Пупкин", id: 1 },
+//   { fullName: "Петя Иванов", id: 2 },
+//   { fullName: "Маша Петрова", id: 3 }
+// ]
+
+// alert( usersMapped[0].id ) // 1
+// alert( usersMapped[0].fullName ) // Вася Пупкин
+
+
+
+// task9
+
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 28 };
+// let vanya = { name: "Ваня", age: 25 };
+
+
+// let arr = [ vasya, petya, masha, vanya ];
+
+// function sortByAge(arr) {
+//   arr.sort(( (a, b) => a.age > b.age ? 1 : -1));
+// }
+
+// sortByAge(arr);
+// console.log(arr);
+
+// // теперь: [vasya, masha, petya]
+// alert(arr[0].name); // Вася
+// alert(arr[1].name); // Маша
+// alert(arr[2].name); // Петя
+
+
+// task10
+
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 29 };
+
+// let arr = [ vasya, petya, masha ];
+
+
+// function getAverageAge(users) {
+//   let averageAge = users.reduce((sum, item) => sum + item.age, 0) / users.length;
+//   return averageAge;
+// }
+
+// alert( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
+
+
+// task11
+
+// function unique(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 1; j < arr.length;) {
+//       if (arr[i] === arr[j]) {
+//         console.log(arr[i], i, j);
+//         console.log(arr);
+//         arr.splice(j,1);
+//       }
+//   }
+// }
+// return arr;
+// }
+
+
+// function unique(arr) {
+//   let result = [];
+
+//   for (let str of arr) {
+//     if (result.includes(str) == false) {
+//       result.push(str);
+//     }
+//   }
+
+//   return result;
+// }
+
+// let strings = ["кришна", "кришна", "харе", "харе",
+//   "харе", "харе", "кришна", "кришна", ":-O"
+// ];
+
+
+// alert( unique(strings) ); // кришна, харе, :-O
+
+
+// task12
+
+// let users = [
+//   {
+//     id: 'john', 
+//     name: "John Smith", 
+//     age: 20
+//   },
+//   {
+//     id: 'ann', 
+//     name: "Ann Smith", 
+//     age: 24
+//   },
+//   {
+//     id: 'pete', 
+//     name: "Pete Peterson", 
+//     age: 31
+//   },
+// ];
+
+// // // function groupById(arr) {
+// // //   let result = {};
+// // //   for (let i = 0; i < arr.length; i++) {
+// // //      result[arr[i].id] = [arr[i].name, arr[i].age];
+// // //     console.log(arr[i].id);
+// // //     // console.log(i);
+// // //   }
+// // //   return result;
+// // // }
+
+
+// function groupById(arr) {
+//   let result = arr.reduce((obj, item) => {
+//     obj[item.id] = item;
+//     return obj;
+//     }, {})
+//   return result;
+// }
+
+
+// let usersById = groupById(users);
+// console.log(usersById);
+// alert(usersById);
+
+
+// task13
+
+// function shuffle(array) {
+//   array.sort(() => Math.random() - 0.5);
+// }
+
+// let arr = [1, 2, 3];
+// shuffle(arr);
+// alert(arr);
