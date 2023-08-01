@@ -746,3 +746,76 @@
 // console.log(keys);
 
 
+// lesson8 - WeakMap and WeakSet
+
+
+// task1
+
+// let messages = [
+//   {
+//     text: "Hello", 
+//     from: "John"
+//   },
+//   {
+//     text: "How goes?", 
+//     from: "John"
+//   },
+//   {
+//     text: "See you soon", 
+//   from: "Alice"
+//   }
+// ];
+// console.log(messages);
+
+// let messagesReadSet = new WeakSet();
+// // console.log(messagesReadSet);
+
+
+// messagesReadSet.add(messages[0]);
+// messagesReadSet.add(messages[1]);
+
+// // console.log(messagesReadSet);
+
+// messages.shift();
+// console.log(messages);
+// console.log(messagesReadSet);
+
+
+// task2
+
+
+// let messages = [
+//   {
+//     text: "Hello", 
+//     from: "John"
+//   },
+//   {
+//     text: "How goes?", 
+//     from: "John"
+//   },
+//   {
+//     text: "See you soon", 
+//   from: "Alice"
+//   }
+// ];
+
+// let messagesReadMap = new WeakMap();
+
+// messagesReadMap.set(messages[0], new Date(2017, 1, 1));
+// messagesReadMap.set(messages[1], new Date(2017, 2, 1));
+// alert(messagesReadMap.size);
+
+// console.log(messages);
+// console.log(messagesReadMap);
+
+// messages.shift();
+// console.log(messages);
+// console.log(messagesReadMap);
+
+// alert(messagesReadMap.size);
+
+
+
+
+
+
