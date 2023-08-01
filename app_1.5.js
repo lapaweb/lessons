@@ -586,3 +586,163 @@
 // let arr = [1, 2, 3];
 // shuffle(arr);
 // alert(arr);
+
+// task14
+
+// > 4 *3  
+
+
+// let arr = [1, 2, 3, 4, 5];
+
+// function sortArr(arr) {
+//   return arr.filter((item) => item > 4).map((item) => item * 3);
+// }
+
+// // среднее значение
+// const sum = arr.reduce((acc, currentValue) => {
+//   return acc + currentValue
+// }, 0);
+// sum / arr.length
+
+// // проверить все элементы меньше 5
+// const arr3 = [1, 4, 6, 2, 7, 8, 3, 8, 456, 9];
+// const result = arr3.every((item) => item < 5);
+
+// //
+
+// const users = [
+//   { name: "Вася", age: 25 },
+//   { name: "Петя", age: 30 },
+//   { name: "Маша", age: 28 },
+//   { name: "Ваня", age: 25 }
+// ];
+
+// // users.sort((a, b) => a.age < b.age);
+
+// const res = users.map((user) => {
+//   return { ...user, test: `${user.name}-${user.age}` }
+// });
+
+
+
+// lesson7 - Map and set
+
+
+// ex1 - new Map
+
+// let map = new Map();
+
+// map.set("1", "str1");    // строка в качестве ключа
+// map.set(1, "num1");      // цифра как ключ
+// map.set(true, "bool1");  // булево значение как ключ
+
+// console.log(map);
+
+// alert(map.get(1)); // "num1"
+// alert(map.get("1")); // "str1"
+// alert(map.get(true));
+
+// alert(map.size); // 3
+
+
+// ex2 - object = key
+
+// let john = { 
+//   name: "John",
+//   age: 25,
+//   street: "Park Avenu"
+// };
+
+// // давайте сохраним количество посещений для каждого пользователя
+// let visitsCountMap = new Map();
+
+// // объект john - это ключ для значения в объекте Map
+// visitsCountMap.set(john, 123);
+
+// alert(visitsCountMap.get(john)); // 123
+// console.log(visitsCountMap);
+
+
+// ex3 - map and for..of
+
+// let recipeMap = new Map([
+//   ["огурец", 500],
+//   ["помидор", 350],
+//   ["лук",    50]
+// ]);
+
+// console.log(recipeMap);
+
+// // перебор по ключам (овощи)
+// for (let vegetable of recipeMap.keys()) {
+//   console.log(vegetable);
+//   alert(vegetable); // огурец, помидор, лук
+// }
+
+// // перебор по значениям (числа)
+// for (let amount of recipeMap.values()) {
+//   alert(amount); // 500, 350, 50
+// }
+
+// // перебор по элементам в формате [ключ, значение]
+// for (let entry of recipeMap) { // то же самое, что и recipeMap.entries()
+//   alert(entry); // огурец,500 (и так далее)
+// }
+
+
+// task1
+
+// function unique(arr) {
+//   let set = new Set(); 
+//   arr.forEach(item => {
+//     set.add(item);
+//   });
+//   console.log(set);
+//   return set;
+// }
+
+// // function unique(arr) {
+// //   return Array.from(new Set(arr));
+// // }
+
+// let values = ["Hare", "Krishna", "Hare", "Krishna",
+//   "Krishna", "Krishna", "Hare", "Hare", ":-O"
+// ];
+
+// alert( unique(values) ); // Hare,Krishna,:-O
+
+
+// task2
+
+
+// let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+// function aclean(arr) {
+//   let map = new Map();
+
+//   arr.forEach(word => {
+//    let wordSorted = word.toLowerCase().split("").sort().join("");
+//    map.set(wordSorted, word);
+//   });
+//   // console.log(map);
+//   return Array.from(map.values());
+// }
+
+
+// alert( aclean(arr) ); // "nap,teachers,ear" или "PAN,cheaters,era"
+
+
+// task3
+
+// let map = new Map();
+
+// map.set("name", "John");
+
+// let keys = Array.from(map.keys());
+
+// // Error: keys.push is not a function
+// // Ошибка: keys.push -- это не функция
+// keys.push("more");
+// console.log(keys);
+
+
