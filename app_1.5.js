@@ -4,7 +4,7 @@
 // let progressSum;
 // let progressNow;
 
-// progressNow = 18+6+8+3;
+// progressNow = 18+6+8+10;
 // progressSum = ((progressNow/lessonSum)*100).toFixed(2);
 // alert(`Поздравляю, ты прошла ${progressSum}% первой части курса!`);
 
@@ -746,7 +746,7 @@
 // console.log(keys);
 
 
-// lesson8 - WeakMap and WeakSet
+// lesson8 - WeakMap and WeakSet - спросить у Миши, почему я не вижу удаление из WeakMap и WeakSet
 
 
 // task1
@@ -913,5 +913,132 @@
 // topSalary(salaries);
 
 
+// lesson11 - Object Data
+
+//  ex1
+
+// let now = new Date();
+// alert( now ); // показывает текущие дату и время
+
+
+// let Jan01_1970 = new Date(0);
+// alert( Jan01_1970 );
+
+// // теперь добавим 24 часа и получим 02.01.1970 UTC+0
+// let Jan02_1970 = new Date(24 * 3600 * 1000);
+// alert( Jan02_1970 );
+
+// ex2
+
+// let date = new Date("2017-01-26");
+// alert(date);
+
+
+// task1
+
+// let date = new Date( Date.parse('2012-01-20T03:12:00') );
+// let date2 = new Date(2012, 0, 20, 3, 12);
+
+// console.log(date);
+// console.log(date2);
+
+
+// alert(date);
+// alert(date2);
+
+
+// task2
+
+// let date = new Date(2012, 0, 3);  // 3 января 2012 года
+
+// function getWeekDay(date) {
+//   let days = ["ВС", "ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ"]
+//   dayW = days[date.getDay()];
+//   console.log(dayW);
+//   return dayW;
+// }
+
+
+// alert( getWeekDay(date) );        // нужно вывести "ВТ"
+
+
+// task3
+
+
+// let date = new Date(2012, 0, 3);  // 3 января 2012 года
+
+// function getWeekDay(date) {
+//   // let days = ["ВС", "ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ"]
+//   dayW = date.getDay() + 5;
+//   dayW === 0 ? dayW = 7 : dayW; 
+//   console.log(dayW);
+//   return dayW;
+// }
+
+
+// alert( getWeekDay(date) );        // нужно вывести "ВТ"
+
+
+// task4
+
+
+// let date = new Date(2015, 0, 2);
+
+// function getDateAgo(date, days) {
+//   let newDate = new Date (date);
+//   // console.log(date.getDate());
+//   console.log(date);
+//   console.log(newDate);
+
+//   return new Date (newDate.setDate(newDate.getDate() - days));
+//   // return newDate = new Date (newDate.getDate() + days);
+// }
+
+// alert( getDateAgo(date, 1) ); // 1, (1 Jan 2015)
+// alert( getDateAgo(date, 2) ); // 31, (31 Dec 2014)
+// alert( getDateAgo(date, 365) ); // 2, (2 Jan 2014)
+
+
+// task5
+
+
+// function getLastDayOfMonth(year, month) {
+//  let myDate = new Date (year, month + 1, 0);
+// //  let lastDay = myDate.getDate(myDate.setDate(myDate.getDate() - 1));
+//  return myDate.getDate();
+// }
+
+// alert (getLastDayOfMonth(2012, 1));
+
+
+// task6
+
+
+// function getSecondsToday() {
+//   let dateToday = new Date();
+//   return dateToday.getHours() * 3600 + dateToday.getMinutes() * 60 + dateToday.getSeconds();
+//   let secondsToday2 = dateToday.getTime() / 1000;
+//   console.log(dateToday);
+// }
+
+// alert (getSecondsToday());
+
+
+// task7
+
+
+// function getSecondsToTomorrow() {
+//   let dateToday = new Date();
+//   let dateTomottow = new Date(dateToday.getFullYear(), dateToday.getMonth(), dateToday.getDate() + 1, 0, 0, 0);
+//   return diff = Math.round((dateTomottow - dateToday) / 1000);
+//   console.log(dateToday);
+//   console.log(dateTomottow);
+
+// }
+
+// alert(getSecondsToTomorrow());
+
+
+// task8
 
 
