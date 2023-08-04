@@ -1,7 +1,5 @@
 // LJ part 1 section 6
 
-const { task } = require("gulp");
-
 // const lessonSum = 91 - 2 - 3 - 8;
 // let progressSum;
 // let progressNow;
@@ -377,6 +375,44 @@ const { task } = require("gulp");
 // sum(0)(1)(2)(3)(4)(5);
 
 
+// lesson8 - setTimeout and setInterval
 
+// task1
+
+// variant1 - setInterval
+// function printNumbers(from, to) {
+//   let count = from;
+//   let timerId = setInterval(function(){
+//   if (count < to) {
+//     alert(count);
+//     count++;
+//     }
+//   }, 2000
+//   )};
+
+
+
+  // variant2 - setInterval
+//   function printNumbers(from, to) {
+//   let count = from;
+//   let timerId = setTimeout(function tuck() {
+//     alert(count);
+//     count++;
+//     if (count <= to ) {
+//       timerId = setTimeout(tuck, 2000);
+//     }
+//   }, 2000)
+// }
+  
+  
+  // setInterval(function(){
+  // if (count < to) {
+  //   alert(count);
+  //   count++;
+  //   }
+  // }, 2000
+  // )};
+
+// printNumbers(2, 5);
 
 
