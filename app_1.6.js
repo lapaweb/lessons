@@ -1,12 +1,16 @@
 // LJ part 1 section 6
 
-// const lessonSum = 91;
+const { task } = require("gulp");
+
+// const lessonSum = 91 - 2 - 3 - 8;
 // let progressSum;
 // let progressNow;
+// let lessonCount;
 
-// progressNow = 18+6+8+12+1;
+// progressNow = 18+6+8+12+5;
 // progressSum = ((progressNow/lessonSum)*100).toFixed(2);
-// alert(`Поздравляю, ты прошла ${progressSum}% первой части курса!`);
+// lessonCount = lessonSum - progressNow;
+// alert(`Поздравляю, ты прошла ${progressSum}% первой части курса! Осталось всего ${lessonCount} из ${lessonSum} уроков!`);
 
 
 // lesson1 - recursion
@@ -321,5 +325,58 @@
 
 // army[0](); // 0
 // army[5](); // 5
+
+
+// lesson6 - Object functions, NFE
+
+// task1 - спросить у Миши про decrease
+
+// function makeCounter() {
+
+//   let count = 0;
+//   function counter() {
+//     return count++;
+//   };
+  
+//   counter.set = function(value) {
+//     count = value;
+//     return count;
+//   }
+
+//   counter.decrease = function() {
+//     // count = count - 1;
+//     return --count;
+//   }
+
+
+//   return counter;
+// }
+
+// let counter = makeCounter();
+
+// console.log(counter);
+
+// // counter.count = 10;
+
+// alert( counter() ); // 10
+// alert( counter() ); // 10
+
+// alert( counter.set(25) );
+
+// alert( counter.decrease() );
+
+// // alert( counter() ); // 10
+
+
+// task2
+
+// sum(1)(2);
+// sum(1)(2)(3);
+// sum(5)(-1)(2);
+// sum(6)(-1)(-2)(-3);
+// sum(0)(1)(2)(3)(4)(5);
+
+
+
 
 
