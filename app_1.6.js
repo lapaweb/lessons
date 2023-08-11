@@ -5,7 +5,7 @@
 // let progressNow;
 // let lessonCount;
 
-// progressNow = 18+6+8+12+5;
+// progressNow = 18+6+8+12+8;
 // progressSum = ((progressNow/lessonSum)*100).toFixed(2);
 // lessonCount = lessonSum - progressNow;
 // alert(`Поздравляю, ты прошла ${progressSum}% первой части курса! Осталось всего ${lessonCount} из ${lessonSum} уроков!`);
@@ -392,7 +392,7 @@
 
 
 
-  // variant2 - setInterval
+  // variant2 - setTimeout
 //   function printNumbers(from, to) {
 //   let count = from;
 //   let timerId = setTimeout(function tuck() {
@@ -416,3 +416,182 @@
 // printNumbers(2, 5);
 
 
+// lesson9 - decorator
+
+
+// ex1 - base cache - спросить у Миши
+// function slow(x) {
+//   // здесь могут быть ресурсоёмкие вычисления
+//   alert(`Called with ${x}`);
+//   return x;
+// }
+
+// function cachingDecorator(func) {
+//   let cache = new Map();
+
+//   return function(x) {
+//     if (cache.has(x)) {    // если кеш содержит такой x,
+//       // console.log('has', x);
+//       return cache.get(x); // читаем из него результат
+//     }
+
+//     let result = func(x); // иначе, вызываем функцию
+//     // console.log('result',result);
+//     cache.set(x, result); // и кешируем (запоминаем) результат
+//     return result;
+//   };
+// }
+
+// slow  = cachingDecorator(slow); ?????
+
+// alert( slow(1) ); // slow(1) кешируем
+// alert( "Again: " + slow(1) ); // возвращаем из кеша
+
+// alert( slow(2) ); // slow(2) кешируем
+// alert( "Again: " + slow(2) ); // возвращаем из кеша
+
+
+// ex2
+
+// сделаем worker.slow кеширующим
+// let worker = {
+//   someMethod() {
+//     return 2;
+//   },
+
+//   slow(x) {
+//     // здесь может быть страшно тяжёлая задача для процессора
+//     alert("Called with " + x);
+//     return x * this.someMethod(); // (*)
+//   }
+// };
+// // console.log(worker);
+
+// // тот же код, что и выше
+// function cachingDecorator(func) {
+//   let cache = new Map();
+//   return function(x) {
+//     if (cache.has(x)) {
+//       return cache.get(x);
+//     }
+//     let result = func.call(this, x);
+//     cache.set(x, result);
+//     return result;
+//   };
+// }
+
+// alert( worker.slow(1) ); // оригинальный метод работает
+
+// worker.slow = cachingDecorator(worker.slow); // теперь сделаем его кеширующим
+
+// alert( worker.slow(2) ); // Ой! Ошибка: не удаётся прочитать свойст
+
+
+// ex3
+
+// let worker = {
+//   slow(min, max) {
+//     alert(`Called with ${min},${max}`);
+//     return min + max;
+//   }
+// };
+
+// function cachingDecorator(func, hash) {
+//   let cache = new Map();
+//   return function() {
+//     let key = hash(arguments); // (*)
+//     if (cache.has(key)) {
+//       return cache.get(key);
+//     }
+
+//     let result = func.call(this, ...arguments); // (**)
+
+//     cache.set(key, result);
+//     return result;
+//   };
+// }
+
+// function hash(args) {
+//   return args[0] + ',' + args[1];
+// }
+
+// worker.slow = cachingDecorator(worker.slow, hash);
+
+// alert( worker.slow(3, 5) ); // работает
+// alert( "Again " + worker.slow(3, 5) ); // аналогично (из кеша)
+
+
+// task1
+
+// function work(a, b) {
+//   alert( a + b ); // произвольная функция или метод
+// }
+
+// function spy(func) {
+
+// };
+
+// work(1, 2); // 3
+// work(4, 5); // 9
+
+// for (let args of work.calls) {
+//   alert( 'call:' + args.join() ); // "call:1,2", "call:4,5"
+// }
+
+
+// task2 - спросить у Миши про их решение
+
+// function f(x) {
+//   alert(x);
+//   // return x;
+// }
+
+// // function delay(func, delay) {
+// //   console.log(typeof(delay), delay);
+// //   return function (x) {
+// //     let z = 0;
+// //     z = func(x) * Number(delay);
+// //     return z;
+// //   }
+// // }
+
+// function delay(func, ms) { 
+  
+//   return function(...arg) {
+//     setTimeout(f, 1000, ...arg);
+//   }
+   
+// }
+
+// // создаём обёртки
+// let f1000 = delay(f, 1000);
+// // let f1500 = delay(f, 1500);
+
+// f1000("test"); // показывает "test" после 1000 мс
+// // f1500("test"); // показывает "test" после 1500 мс
+
+
+// taskMy
+
+// function f(x) {
+//   alert('vyzov' + x);
+//   return x;
+// }
+
+// function cachingDecorator(func) {
+//   let cache = new Map();
+//   return function(x) {
+//     if (cache.has(x)) {
+//       return cache.get(x);
+//     }
+//     else {
+//       let result = func(x);
+//       cache.set(x, result);
+//       return result;
+//     }
+//   }
+// }
+
+// f = cachingDecorator(f);
+
+// alert(f(22));
