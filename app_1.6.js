@@ -1,5 +1,7 @@
 // LJ part 1 section 6
 
+// const { task } = require("gulp");
+
 // const lessonSum = 91 - 2 - 3 - 8;
 // let progressSum;
 // let progressNow;
@@ -595,3 +597,83 @@
 // f = cachingDecorator(f);
 
 // alert(f(22));
+
+
+
+// lesson10 - this
+
+// task1
+
+// function f() {
+//   alert( this ); // null
+// }
+
+// f();
+
+// let user = {
+//   g: f.bind(null)
+// };
+
+// user.g();
+
+
+// task2
+
+// function f() {
+//   alert(this.name);
+// }
+
+// f = f.bind( {name: "Вася"} ).bind( {name: "Петя" } );
+
+// f();
+
+
+// task3
+
+// function sayHi() {
+//   alert( this.name );
+// }
+// sayHi.test = 5;
+
+// // sayHi();
+// // console.log(sayHi);
+// // console.log(sayHi.test);
+
+// let bound = sayHi.bind({
+//   name: "Вася"
+// });
+// console.log(bound);
+
+// alert( bound.test ); // что выведет? почему?
+// alert( bound.name ); // что выведет? почему?
+// alert( sayHi.name ); // что выведет? почему?
+
+
+// task4
+
+// function askPassword(ok, fail) {
+//   let password = prompt("Password?", '');
+//   if (password == "rockstar") ok();
+//   else fail();
+// }
+
+// let user = {
+//   name: 'Вася',
+
+//   loginOk() {
+//     alert(`${this.name} logged in`);
+//   },
+
+//   loginFail() {
+//     alert(`${this.name} failed to log in`);
+//   },
+
+// };
+
+// askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
+
+
+
+
+
+
